@@ -1,27 +1,32 @@
-#include<stdio.h>
+#include <stdio.h>
 
 /**
- * main - Entry point
+ * main - Entry point of the program
  *
- * Description: print numbers of base16 in lowercase
+ * Description:
+ * This program prints all the numbers of base 16 (hexadecimal) in lowercase,
+ * followed by a new line.
  *
  * Return: Always 0 (Success)
-*/
-
+ */
 int main(void)
 {
-int digit = 48; /*48; decimal rep of 0*/
+	char digit;
 
-while (digit <= 102) /*102; decimal rep of f*/
-{
-putchar(digit);
+	/* Print numbers '0' to '9' */
+	for (digit = '0'; digit <= '9'; digit++)
+	{
+		putchar(digit);
+	}
 
-/* after 9 we jump till 96; `*/
-if (digit == 57)
-digit += 39;
-digit++;
-}
-putchar(n);
+	/* Print letters 'a' to 'f' */
+	for (digit = 'a'; digit <= 'f'; digit++)
+	{
+		putchar(digit);
+	}
 
-return (0);
+	/* Print a newline character */
+	putchar('\n');
+
+	return (0);
 }
